@@ -495,7 +495,7 @@ h1 {
     margin-bottom: 15px;
     padding: 10px 15px;
     border-radius: 8px;
-    transition: transform .5s;
+    transition:.5s;
 }
 
 .item:hover{
@@ -532,6 +532,12 @@ footer {
     border: none;
     border-radius: 8px;
     cursor: pointer;
+    transition: .5s;
+}
+
+.botao_voltar:hover{
+    transition: .5s;
+    transform: scale(1.1);
 }
 
 /* formulário */
