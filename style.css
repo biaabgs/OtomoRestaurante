@@ -474,7 +474,7 @@ h1 {
     width: 100vh;
     justify-self: center;
     margin-top: 20vh;
-    margin-bottom: 5vh;
+    margin-bottom: 10vh;
     background-color: green0;
 }
 
@@ -525,9 +525,17 @@ footer {
     margin-top: 40px;
 }
 
-
+.botao_volta {
+    padding: 10px 20px;
+    background-color: #d00000;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
 
 /* formulário */
+
 .container {
     max-width: 800px;
     margin: 50px auto;
