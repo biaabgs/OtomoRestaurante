@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Otomo Restaurante</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" crossorigin="anonymous" />
+</head>
+<body>
+<header class="header">
+    <div class="containerHeader">
+        <div class="flex">
+            <a href="index.html"><img class="logo" src="logo.png" alt="Logo Otomo" /></a>
+            <nav>
+                <ul>
+                    <li><a class="titulos" onclick="scrollWin()">Rodízio</a></li>
+                    <li><a class="titulos" href="cardapio.html">Cardápio</a></li>
+                    <li><a class="titulo" href="#">Reservas</a></li>
+                </ul>
+                <div class="square"></div>
+            </nav>
+        </div>
+    </div>
+</header>
+
+<main class="container">
+    <h1>Reserva de Mesa</h1>
+    <form id="form-reserva" class="formulario" method="post" action="reservas.php">
+        <!-- ETAPA 1 -->
+        <div class="form-step active">
+            <fieldset>
+                <legend>Dados Pessoais</legend>
+                <div class="input_box">
+                    <label for="nome">Nome Completo</label>
+                    <input type="text" name="nome" id="nome" required />
+                </div>
+                <div class="input_box">
+                    <label for="cpf">CPF</label>
+                    <input type="text" name="cpf" id="cpf" />
+                </div>
+                <div class="input_box">
+                    <label for="telefone">Telefone</label>
+                    <input type="tel" name="telefone" id="telefone" required />
+                </div>
+                <div class="input_box">
+                    <label for="email">E-mail</label>
+                    <input type="email" name="email" id="email" required />
+                </div>
+            </fieldset>
+            <div class="botao">
+                <button type="button" onclick="nextStep()">Próximo</button>
+            </div>
+        </div>
+
+        <!-- ETAPA 2 -->
+        <div class="form-step">
+            <fieldset>
+                <legend>Informações da Reserva</legend>
+                <div class="input_box">
+                    <label for="data_reserva">Data da Reserva</label>
+                    <input type="date" name="data_reserva" id="data_reserva" required />
+                </div>
+                <div class="input_box">
+                    <label for="hora_reserva">Horário</label>
+                    <input type="time" name="hora_reserva" id="hora_reserva" required />
+                </div>
+                <div class="input_box">
+                    <label for="quantidade_pessoas">Número de Pessoas</label>
+                    <input type="number" name="quantidade_pessoas" id="quantidade_pessoas" min="1" max="20" required />
+                </div>
+            </fieldset>
+            <div class="botao">
+                <button type="button" onclick="prevStep()">Voltar</button>
+                <button type="button" onclick="nextStep()">Próximo</button>
+            </div>
+        </div>
+
+        <!-- ETAPA 3 -->
+        <div class="form-step">
+            <fieldset>
+                <legend>Observações e Confirmação</legend>
+                <div class="input_box">
+                    <label for="observacoes">Observações</label>
+                    <textarea name="observacoes" id="observacoes" rows="4" placeholder="Alergias, preferências, etc."></textarea>
+                </div>
+                <div class="checkbox_box">
+                    <input type="checkbox" id="confirmacao" name="confirmacao" required />
+                    <label for="confirmacao">Confirmo que li e aceito os termos da reserva.</label>
+                </div>
+            </fieldset>
+            <div class="botao">
+                <button type="button" onclick="prevStep()">Voltar</button>
+                <input type="submit" value="Reservar" />
+            </div>
+        </div>
+    </form>
+</main>
+
+<footer>
+    <div class="footer-content">
+        <div class="footer-contacts">
+            <h1>Logo</h1>
+            <p>It's all about your dreams.</p>
+
+            <div class="footer-social-media">
+                <a href="#" class="footer-link instagram">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+                <a href="#" class="footer-link facebook">
+                    <i class="fa-brands fa-facebook-f"></i>
+                </a>
+                <a href="#" class="footer-link whatsapp">
+                    <i class="fa-brands fa-whatsapp"></i>
+                </a>
+            </div>
+        </div>
+
+        <ul class="footer-list">
+            <li><h3>Menu</h3></li>
+            <li><a href="#" class="footer-link">Rodízio</a></li>
+            <li><a href="#" class="footer-link">Cardápio</a></li>
+            <li><a href="#" class="footer-link">Reservas</a></li>
+        </ul>
+
+        <ul class="footer-list">
+            <li><h3>Cardápio</h3></li>
+            <li><a href="#" class="footer-link">Entradas</a></li>
+            <li><a href="#" class="footer-link">Sobremesa</a></li>
+            <li><a href="#" class="footer-link">Bebidas</a></li>
+        </ul>
+    </div>
+</footer>
+
+<script>
+    // Header toggle on scroll
+    window.addEventListener('scroll', () => {
+        const header = document.querySelector('.header');
+        header.classList.toggle('rolagem', window.scrollY > 0);
+    });
+
+    // Scroll smooth function example (você pode usar ou ajustar)
+    function scrollWin() {
+        window.scrollTo({ top: 1550, left: 0, behavior: 'smooth' });
+    }
+
+    // Máscara CPF
+    document.getElementById('cpf').addEventListener('input', function (e) {
+        let valor = e.target.value.replace(/\D/g, '');
+        if (valor.length > 11) valor = valor.slice(0, 11);
+        e.target.value = valor.replace(/(\d{3})(\d{3})(\d{3})(\d{0,2})/, function (_, p1, p2, p3, p4) {
+            return `${p1}.${p2}.${p3}-${p4}`;
+        });
+    });
+
+    // Máscara Telefone
+    document.getElementById('telefone').addEventListener('input', function (e) {
+        let valor = e.target.value.replace(/\D/g, '');
+        if (valor.length > 11) valor = valor.slice(0, 11);
+        e.target.value = valor.replace(/(\d{2})(\d{5})(\d{0,4})/, function (_, p1, p2, p3) {
+            return `(${p1}) ${p2}-${p3}`;
+        });
+    });
+
+    // Controle do formulário multi-step
+    let currentStep = 0;
+    const steps = document.querySelectorAll('.form-step');
+
+    function showStep(index) {
+        steps.forEach((step, i) => step.classList.toggle('active', i === index));
+    }
+
+    function nextStep() {
+        if (currentStep < steps.length - 1) {
+            currentStep++;
+            showStep(currentStep);
+        }
+    }
+
+    function prevStep() {
+        if (currentStep > 0) {
+            currentStep--;
+            showStep(currentStep);
+        }
+    }
+
+    // Validação do formulário no submit
+    document.getElementById('form-reserva').addEventListener('submit', function (e) {
+        const dataReserva = document.getElementById('data_reserva').value;
+        const hoje = new Date().toISOString().split("T")[0];
+        const checkboxConfirmacao = document.getElementById('confirmacao');
+
+        if (dataReserva < hoje) {
+            e.preventDefault();
+            alert("Por favor, selecione uma data válida no futuro.");
+            // Vai para a etapa 2 onde está a data
+            currentStep = 1;
+            showStep(currentStep);
+            return false;
+        }
+
+        if (!checkboxConfirmacao.checked) {
+            e.preventDefault();
+            alert("Você precisa aceitar os termos da reserva para continuar.");
+            // Vai para a etapa 3 onde está o checkbox
+            currentStep = 2;
+            showStep(currentStep);
+            return false;
+        }
+
+        alert("Reserva enviada com sucesso! Entraremos em contato.");
+        return true;
+    });
+
+    // Inicializa a primeira etapa
+    document.addEventListener('DOMContentLoaded', () => {
+        showStep(currentStep);
+    });
+</script>
+</body>
+</html>

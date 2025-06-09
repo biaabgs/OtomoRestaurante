@@ -1,0 +1,160 @@
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Otomo Restaurante</title>
+</head>
+
+<body class="teste">
+    <header class="header">
+        <div class="containerHeader">
+            <div class="flex">
+                <a onclick="scrollWin0()"><i><img class="logo" src="logo.png" alt=""></i></a>
+                <nav>
+                    <ul>
+                        <li><a class="titulos" onclick="sushi()">Sushis</a></li>
+                        <li><a class="titulos" onclick="temakis()">Temakis</a></li>
+                        <li><a class="titulos" onclick="sobremesas()"> Sobremesas </a></li>
+                        <li><a class="titulo" onclick="bebidas()"> Bebidas </a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+
+    </header>
+    <script src="script.js"></script> <!-- sem isso a animação não funciona -->
+
+    <main class="menu">
+        <section class="categoria"> <!-- o section ajuda a organizar um bloco de itens especificos -->
+            <h2>Sushis</h2>
+            <div class="item">
+                <h3>Hot Roll</h3>
+                <p>Sushi empanado recheado com salmão e cream cheese</p>
+                <span>R$ 24,90</span> <!-- é tipo um p como outro nome kkkk -->
+            </div>
+            <div class="item">
+                <h3>Salmão Nigiri</h3>
+                <p>Bolinhos de arroz com fatia de salmão cru</p>
+                <span>R$ 19,90</span>
+            </div>
+        </section>
+
+        <section class="categoria">
+            <h2>Temakis</h2>
+            <div class="item">
+                <h3>Temaki Salmão</h3>
+                <p>Temaki com salmão fresco, cebolinha e arroz</p>
+                <span>R$ 21,90</span>
+            </div>
+            <div class="item">
+                <h3>Temaki Skin</h3>
+                <p>Temaki com Pele de salmão grelhada e crocante com arroz e cebolinha</p>
+                <span>R$ 22,90</span>
+            </div>
+            <div class="item">
+                <h3>Temaki Califórnia</h3>
+                <p>Kani, manga, pepino e arroz</p>
+                <span>R$ 23,90</span>
+            </div>
+        </section>
+
+        <section class="categoria">
+            <h2>Sobremesas</h2>
+            <div class="item">
+                <h3>Dorayaki</h3>
+                <p>Panqueca Japonesa recheada com chocolate</p>
+                <span>R$ 15,90</span>
+            </div>
+            <div class="item">
+                <h3>Mochi Recheado</h3>
+                <p>Bolinho de arroz japonês com recheio de morango, chá verde ou chocolate</p>
+                <span>R$ 13,90</span>
+            </div>
+            <div class="item">
+                <h3>Tempurá de Sorvete</h3>
+                <p>Sorvete empanado e frito, servido com calda de chocolate</p>
+                <span>R$ 18,00</span>
+            </div>
+        </section>
+
+        <section class="categoria">
+            <h2>Bebidas</h2>
+            <div class="item">
+                <h3>Chá Verde</h3>
+                <p>Chá gelado tradicional japonês</p>
+                <span>R$ 6,00</span>
+            </div>
+            <div class="item">
+                <h3>Refrigerante</h3>
+                <p>Lata 350ml</p>
+                <span>R$ 6,00</span>
+            </div>
+            <div class="item">
+                <h3>Água</h3>
+                <p>Garrafinha 500ml</p>
+                <span>R$ 4,00</span>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-contacts">
+                <h1>Logo</h1>
+                <p>It's all about your dreams.</p>
+
+                <div class="footer-social-media">
+                    <a href="#" class="footer-link instagram">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+
+                    <a href="#" class="footer-link facebook">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+
+                    <a href="#" class="footer-link whatsapp">
+                        <i class="fa-brands fa-whatsapp"></i>
+                    </a>
+                </div><!-- footer-social-media -->
+            </div><!-- footer-contacts -->
+            
+            <ul class="footer-list">
+                <li>
+                    <h3>Menu</h3>
+                </li>
+                <li>
+                    <a href="#" class="footer-link">Rodízio</a>
+                </li>
+                <li>
+                    <a href="#" class="footer-link">Cardápio</a>
+                </li>
+                <li>
+                    <a href="#" class="footer-link">Reservas</a>
+                </li>
+            </ul><!-- footer-list -->
+
+            <ul class="footer-list">
+                <li>
+                    <h3>Cardápio</h3>
+                </li>
+                <li>
+                    <a href="cardapio.html" class="footer-link">Pratos</a>
+                </li>
+                <li>
+                    <a href="#" class="footer-link">Bebidas</a>
+                </li>
+                <li>
+                    <a href="#" class="footer-link">Sobremesas</a>
+                </li>
+            </ul><!-- footer-list  -->
+        </div><!-- footer-content -->
+    </footer>F
+
+</body>
+
+</html>
