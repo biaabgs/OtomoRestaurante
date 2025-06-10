@@ -59,7 +59,7 @@ function sobremesas() {
 }
 function bebidas() {
     window.scrollTo({
-        top: 1700,
+        top: 1950,
         left: 0,
         behavior: 'smooth'
     });

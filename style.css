@@ -436,9 +436,14 @@ h1 {
 }
 
 .inform{
-    background-color: green;
     width: 80%;
     margin-left: 3vh;
+}
+
+h4{
+    display: flex;
+    justify-content: space-between;
+    font-size: small;
 }
 
 .fotinhaa{
@@ -808,21 +813,28 @@ i {
 
 .container1_rodizio{
     display: flex;
-    background-color: rgb(255, 0, 0);
     width: 150vh;
-    height: 65vh;
+    height: auto;
     margin-top: 20vh;
     justify-self: center;
+    align-items: center;
 }   
+
 
 .texto_container_rodizio{
 
 }
 
 .titulo1_rodizio{
-    font-size: 32px;
+    font-size: 42px;
 }
 
 .descricao_container_rodizio{
     font-size: 22px;
+}
+
+.imagem_container_rodizio{
+    width: 800px;
+    border-radius: 30px;
+    padding: 20px;
 }
