@@ -11,6 +11,7 @@
 </head>
 
 <body>
+    <!-- Cabeçalho -->
     <header class="header">
         <div class="containerHeader">
             <div class="flex">
@@ -29,77 +30,7 @@
     <script src="script.js"></script>
 
     <main>
-        <!-- <img src="prato_home_mega_atualizado.png" class="prato_home"> -->
-        <div class="carrossel">
-            <button id="botaoVoltar"><</button>
-          
-            <div class="anuncio on">
-                <img src="PratoHome_certo.png" alt="prato principal" class="pratoPrincipal">
-            </div>
-            <div class="anuncio">
-              <img src="PratoHome2.png" alt="Imagem 2" class="pratoPrincipal">
-            </div>
-            <div class="anuncio">
-              <img src="imagem3.jpg" alt="Imagem 3">
-            </div>
-          
-            <button id="botaoProximo">></button>
-          </div>
-          <script>
-          // Carrossel tela inicial
-          const botaoPro = document.getElementById("botaoProximo")
-          const botaoVol = document.getElementById("botaoVoltar")
-          const anuncio = document.querySelectorAll(".anuncio")
-      
-          let contador = 0;
-      
-        const tempoTransicao = 5000; // quantidade de tempo entre cada transição dos slides
-      
-          let intervalo = setInterval(proximaImagem, tempoTransicao); //Para iniciar o intervalo de tempo para a transição de slides
-      
-          //paramos o intervalo de tempo quando o mouse passar sobre o carrossel
-          document.querySelector(".carrossel").addEventListener("mouseover", () => {
-              clearInterval(intervalo);
-          });
-      
-          //Continuar o intervalo de tempo quando o mouse sair do carrossel
-          document.querySelector(".carrossel").addEventListener("mouseout", () => {
-              intervalo = setInterval(proximaImagem, tempoTransicao);
-          });
-      
-          function esconderImagem() {
-              anuncio.forEach(item => item.classList.remove('on'))
-          }
-      
-          function aparecerImagem() {
-              anuncio[contador].classList.add('on')
-          }
-      
-          function proximaImagem() {
-              esconderImagem()
-              if (contador === anuncio.length - 1) {
-                  contador = 0
-              } else {
-                  contador++
-              }
-              aparecerImagem()
-          }
-      
-          function voltarImagem() {
-              esconderImagem()
-              if (contador === 0) {
-                  contador = anuncio.length - 1
-              } else {
-                  contador--
-              }
-              aparecerImagem()
-          }
-      
-          botaoPro.addEventListener('click', proximaImagem)
-          botaoVol.addEventListener('click', voltarImagem)
-        </script>
-
-        <!--  <img class="gradient_home" src="gradient.png"> -->
+        <img src="prato_home_mega_atualizado.png" alt="prato principal" class="pratoPrincipal">
 
         <img class="gradient_home" src="gradient_atualizado.png" alt="">
         <div class="sec">
@@ -108,6 +39,7 @@
 
                 <img class="imagem_container" src="Sushi1.png " alt="demonstração do    sushi">
 
+                <!-- Rodizio -->
                 <div class="texto_container">
                     <h1 class="titulo1_home">RODÍZIO</h1>
                     <p class="descricao_container">Oferecemos apenas um tipo de rodízio,

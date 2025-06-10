@@ -267,7 +267,7 @@ header.rolagem a {
     justify-self: center;
 }
 
-/* container 3 */
+/* Reservas (Container 3) */
 
 .titulo3_home {
     color: #ff6664;
@@ -341,90 +341,6 @@ header.rolagem a {
 }
 
 
-
-/* Footer */
-
-footer {
-    width: 100%;
-    position: relative;
-    top: -50px;
-    z-index: 2;
-}
-
-.footer-link {
-    text-decoration: none;
-    font-size: 20px;
-}
-
-.footer-content {
-    background-color: #f4f0f0;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    padding: 3rem 3.5rem;
-}
-
-.footer-contacts h1 {
-    margin-bottom: 0.75rem;
-}
-
-.footer-social-media {
-    display: flex;
-    gap: 2rem;
-    margin-top: 1.5rem;
-}
-
-.footer-social-media .footer-link {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 2.5rem;
-    width: 2.5rem;
-    color: var(--color-neutral-40);
-    border-radius: 50%;
-    transition: all 0.4s;
-}
-
-.footer-social-media .footer-link i {
-    font-size: 35px;
-}
-
-.footer-social-media .footer-link:hover {
-    background-color: #d45553;
-    opacity: 1px;
-}
-
-i {
-    color: white;
-}
-
-.instagram {
-    background: #ff6664;
-}
-
-.facebook {
-    background: #ff6664;
-}
-
-.whatsapp {
-    background: #ff6664;
-}
-
-.footer-list {
-    display: flex;
-    flex-direction: column;
-    gap: 0.75rem;
-    list-style: none;
-}
-
-.footer-list .footer-link {
-    color: var(--color-neutral-30);
-    transition: all 0.4s;
-}
-
-.footer-list .footer-link:hover {
-    color: .7f37c9;
-}
-
 /* Pagina ceviche */
 
 .cevicheMain {
@@ -490,10 +406,11 @@ h1 {
 }
 
 .item {
+    display: flex;
+    height: 20vh;
     background-color: #fff5f5;
     border-left: 5px solid #ff8a80;
     margin-bottom: 15px;
-    padding: 10px 15px;
     border-radius: 8px;
     transition:.5s;
 }
@@ -517,6 +434,21 @@ h1 {
     font-weight: bold;
     color: #d00000;
 }
+
+.inform{
+    background-color: green;
+    width: 80%;
+    margin-left: 3vh;
+}
+
+.fotinhaa{
+    background-color: #d00000;
+    border-radius: 5px;
+    width: 100%;
+    height: 100%;
+}
+
+
 
 footer {
     text-align: center;
@@ -775,7 +707,10 @@ legend {
     right: 14rem;
 }
 
-.pratoPrincipal {}
+.pratoPrincipal {
+    width: 99%;
+}
+
 
 /*rodizio */
 
@@ -783,4 +718,111 @@ legend {
     position: relative;
     width: 100%;
     height: 100%;  
+}
+
+/* Footer */
+
+footer {
+    width: 100%;
+    position: relative;
+    top: -50px;
+    z-index: 2;
+}
+
+.footer-link {
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.footer-content {
+    background-color: #f4f0f0;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    padding: 3rem 3.5rem;
+}
+
+.footer-contacts h1 {
+    margin-bottom: 0.75rem;
+}
+
+.footer-social-media {
+    display: flex;
+    gap: 2rem;
+    margin-top: 1.5rem;
+}
+
+.footer-social-media .footer-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 2.5rem;
+    width: 2.5rem;
+    color: var(--color-neutral-40);
+    border-radius: 50%;
+    transition: all 0.4s;
+}
+
+.footer-social-media .footer-link i {
+    font-size: 35px;
+}
+
+.footer-social-media .footer-link:hover {
+    background-color: #d45553;
+    opacity: 1px;
+}
+
+i {
+    color: white;
+}
+
+.instagram {
+    background: #ff6664;
+}
+
+.facebook {
+    background: #ff6664;
+}
+
+.whatsapp {
+    background: #ff6664;
+}
+
+.footer-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    list-style: none;
+}
+
+.footer-list .footer-link {
+    color: var(--color-neutral-30);
+    transition: all 0.4s;
+}
+
+.footer-list .footer-link:hover {
+    color: .7f37c9;
+}
+
+
+/* Pagina Rodizio */
+
+.container1_rodizio{
+    display: flex;
+    background-color: rgb(255, 0, 0);
+    width: 150vh;
+    height: 65vh;
+    margin-top: 20vh;
+    justify-self: center;
+}   
+
+.texto_container_rodizio{
+
+}
+
+.titulo1_rodizio{
+    font-size: 32px;
+}
+
+.descricao_container_rodizio{
+    font-size: 22px;
 }

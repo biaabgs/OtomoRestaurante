@@ -14,7 +14,7 @@ function scrollWin0() {
 
 function scrollWin() {
     window.scrollTo({
-        top: 1550,  // ajuste da posição vertical
+        top: 1430,  // ajuste da posição vertical
         left: 0,    // posição horizontal
         behavior: 'smooth'  // Scroll suave
     });
@@ -22,7 +22,7 @@ function scrollWin() {
 
 function scrollWin2() {
     window.scrollTo({
-        top: 2250,
+        top: 2150,
         left: 0,
         behavior: 'smooth'
     });
@@ -30,7 +30,7 @@ function scrollWin2() {
 
 function scrollWin3() {
     window.scrollTo({
-        top: 3050,
+        top: 2950,
         left: 0,
         behavior: 'smooth'
     });

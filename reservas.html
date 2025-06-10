@@ -8,13 +8,14 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" crossorigin="anonymous" />
 </head>
 <body>
+<!--Header-->
 <header class="header">
     <div class="containerHeader">
         <div class="flex">
             <a href="index.html"><img class="logo" src="logo.png" alt="Logo Otomo" /></a>
             <nav>
                 <ul>
-                    <li><a class="titulos" onclick="scrollWin()">Rodízio</a></li>
+                    <li><a class="titulos" onclick="rodizio.html">Rodízio</a></li>
                     <li><a class="titulos" href="cardapio.html">Cardápio</a></li>
                     <li><a class="titulo" href="#">Reservas</a></li>
                 </ul>
@@ -63,7 +64,7 @@
                 </div>
                 <div class="input_box">
                     <label for="hora_reserva">Horário</label>
-                    <input type="time" name="hora_reserva" id="hora_reserva" required />
+                    <input type="time" name="hora_reserva" id="hora_reserva" step="300" required />
                 </div>
                 <div class="input_box">
                     <label for="quantidade_pessoas">Número de Pessoas</label>
@@ -139,7 +140,7 @@
         header.classList.toggle('rolagem', window.scrollY > 0);
     });
 
-    // Scroll smooth function example (você pode usar ou ajustar)
+    // Scroll suave
     function scrollWin() {
         window.scrollTo({ top: 1550, left: 0, behavior: 'smooth' });
     }
@@ -148,8 +149,8 @@
     document.getElementById('cpf').addEventListener('input', function (e) {
         let valor = e.target.value.replace(/\D/g, '');
         if (valor.length > 11) valor = valor.slice(0, 11);
-        e.target.value = valor.replace(/(\d{3})(\d{3})(\d{3})(\d{0,2})/, function (_, p1, p2, p3, p4) {
-            return `${p1}.${p2}.${p3}-${p4}`;
+        e.target.value = valor.replace(/(\d{3})(\d{3})(\d{3})(\d{0,2})/, (_, p1, p2, p3, p4) => {
+            return ${p1}.${p2}.${p3}-${p4};
         });
     });
 
@@ -157,12 +158,12 @@
     document.getElementById('telefone').addEventListener('input', function (e) {
         let valor = e.target.value.replace(/\D/g, '');
         if (valor.length > 11) valor = valor.slice(0, 11);
-        e.target.value = valor.replace(/(\d{2})(\d{5})(\d{0,4})/, function (_, p1, p2, p3) {
-            return `(${p1}) ${p2}-${p3}`;
+        e.target.value = valor.replace(/(\d{2})(\d{5})(\d{0,4})/, (_, p1, p2, p3) => {
+            return (${p1}) ${p2}-${p3};
         });
     });
 
-    // Controle do formulário multi-step
+    // Controle do formulário multi-etapas
     let currentStep = 0;
     const steps = document.querySelectorAll('.form-step');
 
@@ -171,6 +172,25 @@
     }
 
     function nextStep() {
+        const currentForm = steps[currentStep];
+        const inputs = currentForm.querySelectorAll('input, textarea');
+
+        let allValid = true;
+
+        for (const input of inputs) {
+            if (input.hasAttribute('required') && input.value.trim() === '') {
+                input.classList.add('input-erro');
+                allValid = false;
+            } else {
+                input.classList.remove('input-erro');
+            }
+        }
+
+        if (!allValid) {
+            alert('Preencha todos os campos obrigatórios antes de continuar.');
+            return;
+        }
+
         if (currentStep < steps.length - 1) {
             currentStep++;
             showStep(currentStep);
@@ -184,7 +204,7 @@
         }
     }
 
-    // Validação do formulário no submit
+    // Validação final no envio
     document.getElementById('form-reserva').addEventListener('submit', function (e) {
         const dataReserva = document.getElementById('data_reserva').value;
         const hoje = new Date().toISOString().split("T")[0];
@@ -193,7 +213,6 @@
         if (dataReserva < hoje) {
             e.preventDefault();
             alert("Por favor, selecione uma data válida no futuro.");
-            // Vai para a etapa 2 onde está a data
             currentStep = 1;
             showStep(currentStep);
             return false;
@@ -202,17 +221,15 @@
         if (!checkboxConfirmacao.checked) {
             e.preventDefault();
             alert("Você precisa aceitar os termos da reserva para continuar.");
-            // Vai para a etapa 3 onde está o checkbox
             currentStep = 2;
             showStep(currentStep);
             return false;
         }
 
         alert("Reserva enviada com sucesso! Entraremos em contato.");
-        return true;
     });
 
-    // Inicializa a primeira etapa
+    // Início
     document.addEventListener('DOMContentLoaded', () => {
         showStep(currentStep);
     });
