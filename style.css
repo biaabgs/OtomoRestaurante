@@ -441,8 +441,6 @@ h1 {
 }
 
 h4{
-    display: flex;
-    justify-content: space-between;
     font-size: small;
 }
 
