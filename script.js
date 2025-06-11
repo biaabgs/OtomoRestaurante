@@ -36,6 +36,14 @@ function scrollWin3() {
     });
 }
 
+function scrollWin4() {
+    window.scrollTo({
+        top: 4250,
+        left: 0,
+        behavior: 'smooth'
+    });
+}
+
 function sushi() {
     window.scrollTo({
         top: 30,

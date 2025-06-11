@@ -146,8 +146,8 @@ header.rolagem a {
 .sobre{
     display: flex;
     justify-self: center;
-    width: 150vh;
-    background-color: rgb(55, 255, 255);
+    width: 100vh;
+    margin-bottom: 10vh;
 }
 
 .p{
@@ -158,11 +158,10 @@ header.rolagem a {
 .textinho1{
     text-align: right;
     width: 70vh;
-    
-    background-color: green;  
 }
 
 .titulinho{
+    /*  */
     font-size: 35px;
     color: #ff6664;
     text-align: right;
@@ -635,7 +634,7 @@ footer {
     background-color: #f4f0f0;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    padding: 3rem 3.5rem;
+    padding: 3.5rem;
 }
 
 .footer-contacts h1 {
@@ -645,6 +644,7 @@ footer {
 .footer-social-media {
     display: flex;
     gap: 2rem;
+    margin-left: 3vh;
     margin-top: 1.5rem;
 }
 
@@ -691,6 +691,12 @@ i {
     list-style: none;
 }
 
+.footer-list1 {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+}
+
 .footer-list .footer-link {
     color: var(--color-neutral-30);
     transition: all 0.4s;
@@ -703,6 +709,12 @@ i {
 
 /* Pagina Rodizio */
 
+.titulinhor{
+    font-size: 35px;
+    color: #ff6664;
+    text-align: left;
+}
+
 .container1_rodizio{
     display: flex;
     width: 150vh;
@@ -710,42 +722,35 @@ i {
     padding: 30px;
     justify-self: center;
     align-items: center;
-}   
-{
-    font-size: 42px;
-}
+}  
 
 .descricao_container_rodizio{
     font-size: 22px;
+    padding-bottom: 8px;
 }
 
-.imagem_con
-    padding-bottom: 6px;tainer_rodizio{
-    width: 800px;
-    border-radius: 30px;
-    padding: 40px; 
+.container1_rodizio img{
+    border-radius: 40px;
+    width: 600px;
+    padding: 30px;
 }
-
-.fo-leftto_rodi
-    padding-left: 40px;zio{
+.foto_rodizio{
+    margin-top: 20vh;
+    width: 80vh;
+    height: auto;
+    background-color: yellowgreen;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    
+    justify-self: center;
+    text-align: left;
 }
 
 .foto_rodizio img{
-    margin-top: 25vh;
-    border-radius: 10px;
-    width:50%;
-    /* height:100%; */
+    width:100%;     
 }
 
 .rodizio_branco{
-    background-color: fff;
+    background-color: white;
 }
-
 .sec_rodizio {
     background-color: rgb(255, 255, 255);
     position: relative;
