@@ -45,21 +45,21 @@ function sushi() {
 }
 function temakis() {
     window.scrollTo({
-        top: 530,
+        top: 820,
         left: 0,
         behavior: 'smooth'
     });
 }
 function sobremesas() {
     window.scrollTo({
-        top: 1200,
+        top: 1580,
         left: 0,
         behavior: 'smooth'
     });
 }
 function bebidas() {
     window.scrollTo({
-        top: 1950,
+        top: 2550,
         left: 0,
         behavior: 'smooth'
     });
