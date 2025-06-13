@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
         integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"/>
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Otomo Restaurante</title>
 </head>
 
@@ -17,6 +17,7 @@
                 <a onclick="scrollWin0()"><i><img class="logo" src="logo.png" alt=""></i></a>
                 <nav>
                     <ul>
+                        <li><a class="titulos" onclick="sopas()">Sopas</a></li>
                         <li><a class="titulos" onclick="sushi()">Sushis</a></li>
                         <li><a class="titulos" onclick="temakis()">Temakis</a></li>
                         <li><a class="titulos" onclick="sobremesas()"> Sobremesas </a></li>
@@ -30,6 +31,59 @@
     <script src="script.js"></script> <!-- sem isso a animação não funciona -->
 
     <main class="menu">
+        <section class="categoria"> <!-- o section ajuda a organizar um bloco de itens especificos -->
+            <h2>Sopas</h2>
+            <div class="item">
+                <div><img class="fotinhaa" src="missoshiru.png" alt=""></div>
+                <div class="inform">
+                    <h3>Missoshiru</h3>
+                    <p>Caldo de missô com tofu, cebolinha e alga wakame.
+                    <h4>250 ml</h4>
+                    </p>
+                    <span>R$ 12,90</span>
+                </div>
+            </div>
+            <div class="item">
+                <div><img class="fotinhaa" src="lamen.png" alt=""></div>
+                <div class="inform">
+                    <h3>Lámen</h3>
+                    <p>Macarrão oriental com caldo à base de shoyu, legumes e ovo cozido.
+                    <h4>1 porção</h4>
+                    </p>
+                    <span>R$ 29,90</span>
+                </div>
+            </div>
+            <div class="item">
+                <div><img class="fotinhaa" src="udon.png" alt=""></div>
+                <div class="inform">
+                    <h3>Udon</h3>
+                    <p>Macarrão grosso de trigo em caldo quente com cebolinha e tempurá.
+                    <h4>1 porção</h4>
+                    </p>
+                    <span>R$ 26,90</span>
+                </div>
+            </div>
+            <div class="item">
+                <div><img class="fotinhaa" src="tonkotsuramen.png" alt=""></div>
+                <div class="inform">
+                    <h3>Tonkotsu Ramen</h3>
+                    <p>Caldo encorpado de porco com macarrão, ovo e chashu (carne suína).
+                    <h4>1 porção</h4>
+                    </p>
+                    <span>R$ 34,90</span>
+                </div>
+            </div>
+            <div class="item">
+                <div><img class="fotinhaa" src="zoni.png" alt=""></div>
+                <div class="inform">
+                    <h3>Zōni</h3>
+                    <p>Sopa tradicional do Ano Novo com mochi, vegetais e caldo leve.
+                    <h4>250 ml</h4>
+                    </p>
+                    <span>R$ 18,90</span>
+                </div>
+            </div>
+        </section>
         <section class="categoria"> <!-- o section ajuda a organizar um bloco de itens especificos -->
             <h2>Sushis</h2>
             <div class="item">
@@ -61,6 +115,46 @@
                     <h4>06 un.*</h4>
                     </p>
                     <span>R$ 14,90</span>
+                </div>
+            </div>
+            <div class="item">
+                <div><img class="fotinhaa" src="uramaki.png" alt=""></div>
+                <div class="inform">
+                    <h3>Uramaki</h3>
+                    <p>Arroz por fora, recheado com salmão e pepino.
+                    <h4>10 un.*</h4>
+                    </p>
+                    <span>R$ 22,90</span>
+                </div>
+            </div>
+            <div class="item">
+                <div><img class="fotinhaa" src="hossomaki.png" alt=""></div>
+                <div class="inform">
+                    <h3>Hossomaki</h3>
+                    <p>Enrolado fino com alga por fora e recheio de atum.
+                    <h4>10 un.*</h4>
+                    </p>
+                    <span>R$ 17,90</span>
+                </div>
+            </div>
+            <div class="item">
+                <div><img class="fotinhaa" src="jyosalmao.png" alt=""></div>
+                <div class="inform">
+                    <h3>Jyo Salmão</h3>
+                    <p>Arroz envolto em salmão com cobertura de cream cheese.
+                    <h4>08 un.*</h4>
+                    </p>
+                    <span>R$ 23,90</span>
+                </div>
+            </div>
+            <div class="item">
+                <div><img class="fotinhaa" src="gunkanskin.png" alt=""></div>
+                <div class="inform">
+                    <h3>Gunkan Skin</h3>
+                    <p>Arroz envolvido em alga, coberto com pele de salmão crocante.
+                    <h4>06 un.*</h4>
+                    </p>
+                    <span>R$ 18,90</span>
                 </div>
             </div>
         </section>
@@ -95,6 +189,26 @@
                     <h4>Tamanhos: Pequeno, Medio e Grande (+R$2,60 p/ tamanho)</h4>
                     </p>
                     <span>R$ 12,90</span>
+                </div>
+            </div>
+            <div class="item">
+                <div><img class="fotinhaa" src="temakiatum.png" alt=""></div>
+                <div class="inform">
+                    <h3>Temaki Atum</h3>
+                    <p>Temaki com atum fresco, arroz e cebolinha.
+                    <h4>Tamanhos: Pequeno, Medio e Grande (+R$2,60 p/ tamanho)</h4>
+                    </p>
+                    <span>R$ 16,90</span>
+                </div>
+            </div>
+            <div class="item">
+                <div><img class="fotinhaa" src="temakivegetariano.png" alt=""></div>
+                <div class="inform">
+                    <h3>Temaki Vegetariano</h3>
+                    <p>Alface, pepino, cenoura e cream cheese.
+                    <h4>Tamanhos: Pequeno, Medio e Grande (+R$2,60 p/ tamanho)</h4>
+                    </p>
+                    <span>R$ 13,90</span>
                 </div>
             </div>
         </section>
@@ -228,7 +342,7 @@
                     <a href="reservas.html" class="footer-link">Reservas</a>
                 </li>
             </ul><!-- footer-list -->
-            
+
             <ul class="footer-list">
                 <li>
                     <h3>Venha nos visitar !</h3>

@@ -44,30 +44,38 @@ function scrollWin4() {
     });
 }
 
-function sushi() {
+function sopas() {
     window.scrollTo({
         top: 30,
         left: 0,
         behavior: 'smooth'
     });
 }
+
+function sushi() {
+    window.scrollTo({
+        top: 1250,
+        left: 0,
+        behavior: 'smooth'
+    });
+}
 function temakis() {
     window.scrollTo({
-        top: 820,
+        top: 2850,
         left: 0,
         behavior: 'smooth'
     });
 }
 function sobremesas() {
     window.scrollTo({
-        top: 1580,
+        top: 4050,
         left: 0,
         behavior: 'smooth'
     });
 }
 function bebidas() {
     window.scrollTo({
-        top: 2550,
+        top: 5000,
         left: 0,
         behavior: 'smooth'
     });
@@ -148,4 +156,43 @@ const box = document.getElementById("box")
         showStep(currentStep);
     });
 
+        // Script para o carrossel de Rodízios
+    const botaoPro = document.getElementById("botaoProximo")
+    const botaoVol = document.getElementById("botaoVoltar")
+    const prato = document.querySelectorAll(".prato")
+
+    let contador = 0;
+    const tempoTransicao = 3700;
+    let intervalo = setInterval(proximaImagem, tempoTransicao);
+
+    document.querySelector(".carrossel").addEventListener("mouseover", () => {
+        clearInterval(intervalo);
+    });
+
+    document.querySelector(".carrossel").addEventListener("mouseout", () => {
+        intervalo = setInterval(proximaImagem, tempoTransicao);
+    });
+
+    function esconderImagem() {
+        prato.forEach(item => item.classList.remove('on'))
+    }
+
+    function aparecerImagem() {
+        prato[contador].classList.add('on')
+    }
+
+    function proximaImagem() {
+        esconderImagem()
+        contador = (contador + 1) % prato.length
+        aparecerImagem()
+    }
+
+    function voltarImagem() {
+        esconderImagem()
+        contador = (contador - 1 + prato.length) % prato.length
+        aparecerImagem()
+    }
+
+    botaoPro.addEventListener('click', proximaImagem)
+    botaoVol.addEventListener('click', voltarImagem)
 

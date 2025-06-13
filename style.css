@@ -389,6 +389,19 @@ header.rolagem a {
     justify-self: center;
 }
 
+.email_confirmacao{
+    text-align: center;
+    align-self: center;
+    justify-self: center;
+    width: 10px;
+    font-size: 2px;
+}
+
+.email_container_caixa{
+    justify-items: center;
+    align-items: center;
+}
+
 /* Cardapio  */
 
 .teste{
@@ -417,6 +430,8 @@ h1 {
     padding-bottom: 5px;
     margin-bottom: 15px;
 }
+
+
 
 .item {
     display: flex;
@@ -778,54 +793,18 @@ i {
     /* bottom: 600px; */
 }
 
-.carrossel {
-    /*design do carrossel*/
-    display: flex;
-    justify-content: space-between;
-    /*deixa as setas no canto da tela e a imagem no centro*/
-    align-items: center;
-    width: 100%;
+
+.precor{
+    font-size: larger;
+    color: #940000;
+}
+.aniver{
+    font-size: medium;
+    color: #940000;
 }
 
-.carrossel .imagens {
-    height: 50vw;
-    /*tamanho das imagens do carrossel*/
+.pratoRodizio{
+    width: 99%;
+    background-color:#f4f0f0;
 }
 
-.botao {
-    border: none;
-    background: transparent;
-    cursor: pointer;
-    transition: .5s;
-}
-
-.botao:hover {
-    transform: scale(1.2);
-}
-
-.prato {
-    position: absolute;
-    pointer-events: none;
-    opacity: 0;
-    /*deixa as imagens do carrossel transparente*/
-    transition: opacity .5s ease;
-}
-
-.prato img{
-    width: 100%;
-}
-
-.on {
-    /*classe que liga as imagens do carrossel*/
-    opacity: 1;
-    pointer-events: auto;
-
-}
-
-.imagens {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-}

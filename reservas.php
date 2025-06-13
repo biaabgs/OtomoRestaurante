@@ -1,7 +1,7 @@
 <?php
 // Verifica se foi enviado via POST
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Coleta e sanitiza os dados
+    // Coleta dos dados do html
     $nome = htmlspecialchars($_POST['nome']);
     $cpf = htmlspecialchars($_POST['cpf']);
     $telefone = htmlspecialchars($_POST['telefone']);
@@ -17,7 +17,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     exit;
 }
 ?>
-
+<!-- estilização -->
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -77,5 +77,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <a href="index.html">Voltar ao Início</a>
         </div>
     </div>
+    <div><p class="email_confirmacao">Essas informaçôes foram enviadas no email do solicitante da reserva.</p></div>
 </body>
 </html>
