@@ -778,3 +778,54 @@ i {
     /* bottom: 600px; */
 }
 
+.carrossel {
+    /*design do carrossel*/
+    display: flex;
+    justify-content: space-between;
+    /*deixa as setas no canto da tela e a imagem no centro*/
+    align-items: center;
+    width: 100%;
+}
+
+.carrossel .imagens {
+    height: 50vw;
+    /*tamanho das imagens do carrossel*/
+}
+
+.botao {
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    transition: .5s;
+}
+
+.botao:hover {
+    transform: scale(1.2);
+}
+
+.prato {
+    position: absolute;
+    pointer-events: none;
+    opacity: 0;
+    /*deixa as imagens do carrossel transparente*/
+    transition: opacity .5s ease;
+}
+
+.prato img{
+    width: 100%;
+}
+
+.on {
+    /*classe que liga as imagens do carrossel*/
+    opacity: 1;
+    pointer-events: auto;
+
+}
+
+.imagens {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
